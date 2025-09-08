@@ -1,6 +1,6 @@
 pyrate-limiter==2.10.0
-Pyrogram>=2.0.59
-TgCrypto==1.2.4
+pyrofork
+tgcrypto-pyrofork
 python-dotenv 
 speedtest-cli
 telegraph[aio]
@@ -8,7 +8,7 @@ cachetools
 aiofiles
 psutil
 httpx
-motor
+pymongo
 bs4
 uvloop
 pillow

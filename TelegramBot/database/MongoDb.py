@@ -1,6 +1,6 @@
 import sys
 from typing import Union
-from motor.motor_asyncio import AsyncIOMotorClient
+from pymongo import AsyncMongoClient
 
 from TelegramBot.logging import LOGGER
 from TelegramBot.config import MONGO_URI
@@ -89,7 +89,7 @@ class MongoDB:
 
 async def check_mongo_uri(MONGO_URI: str) -> None:
     try:
-        mongo = AsyncIOMotorClient(MONGO_URI)
+        mongo = AsyncMongoClient(MONGO_URI)
         await mongo.server_info()
     except:
         LOGGER(__name__).error(
@@ -99,7 +99,7 @@ async def check_mongo_uri(MONGO_URI: str) -> None:
 
 
 # Initiating MongoDb motor client
-mongodb = AsyncIOMotorClient(MONGO_URI)
+mongodb = AsyncMongoClient(MONGO_URI)
 
 # Database Name (TelegramBot).
 database = mongodb.TelegramBot
