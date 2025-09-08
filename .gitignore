@@ -1,4 +1,7 @@
+.venv/*
 venv/*
 .vscode/*
 *.pyc
+*.session
+logs.txt
 config.env
